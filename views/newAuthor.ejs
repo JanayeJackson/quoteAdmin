@@ -1,0 +1,32 @@
+<%- include('partials/header.ejs') %>
+<div id="layout">
+    <%- include('partials/nav.ejs') %>
+    <div id="main">
+        <h1>Adding a new Author</h1>
+        <form method="POST" action="/author/new">
+            <span class="form-row">First Name: <input type="text" name="fName"></span><br>
+            <span class="form-row">Last Name: <input type="text" name="lName"></span><br>
+            <span class="form-row">Date of Birth: <input type="date" name="birthDate"></span><br>
+            <span class="form-row">Date of Death: <input type="date" name="deathDate"></span><br>
+            
+            <span class="form-row">Sex: 
+                <div class="sex-options">
+                <input type="radio" name="sex" value="M"> Male
+                <input type="radio" name="sex" value="F"> Female
+                </div>
+            </span><br>
+
+            <span class="form-row">Profession: <input type="text" name="prof"></span><br>
+            <span class="form-row">Country: <input type="text" name="country"></span><br>
+            <span class="form-row">Portrait: <input type="text" name="portrait"></span><br>
+            <span class="form-row">Biography: <textarea name="biography" rows="5" cols="40"></textarea></span><br>
+            
+            <button>Add Author</button>
+        </form> 
+        <% if (typeof message != "undefined"){ %>
+  		    <h3><%=message%></h3>
+        <% } %>
+
+    </div>
+</div> 
+<%- include('partials/footer.ejs') %>

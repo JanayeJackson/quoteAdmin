@@ -1,0 +1,26 @@
+<%- include('partials/header.ejs') %>
+
+<div id="layout">
+    <%- include('partials/nav.ejs') %>
+
+    <div id="main">
+        <h1>Authors</h1>
+        <div id="authors">
+            <% for (i of authors) { %>
+                <div class="author-card">
+                    <div class="author-info">
+                        <span class="author-name">
+                            <%= i.firstName %> <%= i.lastName %>
+                        </span>
+                    </div>
+
+                    <div class="author-actions">
+                        <a class="action-btn" href="/author/edit?authorId=<%= i.authorId %>">Update</a>
+                        <a class="action-btn delete-btn" href="/author/delete?authorId=<%= i.authorId %>">Delete</a>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</div>
+<%- include('partials/footer.ejs') %>

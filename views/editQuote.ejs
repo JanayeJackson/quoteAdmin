@@ -1,0 +1,42 @@
+<%- include('partials/header.ejs') %>
+<div id="layout">
+    <%- include('partials/nav.ejs') %>
+    <div id="main">
+        <h1>Updating Quote</h1>
+        <form method="POST" action="/quote/edit">
+            <input type="hidden" name="quoteId" value="<%= quoteInfo[0].quoteId %>">
+
+            <span class="form-row">Quote: <textarea name="quote" rows="5" cols="40"><%= quoteInfo[0].quote %></textarea></span><br>
+            
+            <span class="form-row">Category: 
+                <select name="category" id="category">
+                    <option> Select Category </option>
+                    <% for (category of cats) { %>
+                        <option value="<%= category.category %>"
+                            <% if (category.category == quoteInfo[0].category) { %> selected <% } %>>
+                            <%= category.category %>
+                        </option>
+                    <% } %>
+                </select><br>
+            </span><br> 
+            
+            <span class="form-row">Likes: <input type="number" name="likes" value="<%= quoteInfo[0].likes %>"></span><br>
+        
+            <span class="form-row">Author: 
+                <select name="author" id=author>
+                    <option> Select Author </option>
+                    <% for (author of authors) { %>
+                        <option value="<%= author.authorId %>"
+                        <% if (author.authorId == quoteInfo[0].authorId) { %> selected <% } %>>
+                        <%= author.firstName %> <%= author.lastName %>
+                        </option>
+                    <% } %>
+                </select>
+            </span><br> 
+            
+            <button>Update Quote</button>
+        </form> 
+
+    </div>
+</div> 
+<%- include('partials/footer.ejs') %>

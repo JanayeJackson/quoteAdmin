@@ -1,0 +1,320 @@
+body {
+    background-color: #6f87bd;
+    color: white;
+    font-family: Georgia, serif;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #dfe8ff;
+}
+
+
+.modal-content {
+    background-color: #6f87bd;
+    color: white;
+    border-radius: 12px;
+    border: 1px solid #d9d9d9;
+}
+
+.modal-header,
+.modal-footer {
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.modal-title {
+    font-weight: bold;
+    font-family: Georgia, serif;
+}
+
+#authorInfo {
+    padding: 10px;
+}
+
+#author_card {
+    text-align: center;
+}
+
+#author_name {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#author_potrait {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    max-width: 100%;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+
+#author_details {
+    text-align: left;
+    margin-top: 10px;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+#quote_holder {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.quote {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border-left: 4px solid white;
+}
+
+.misc{
+    display: flex;
+    gap: 25px;
+    margin-top: 18px;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    opacity: 0.9;
+}
+
+.crud {
+  margin-top: 18px;
+  display: flex;
+  gap: 14px;
+}
+
+.crud a {
+  text-decoration: none;
+  color: white;
+  background: rgba(255, 255, 255, 0.14);
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+
+.crud a:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.text {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.author {
+    font-size: 1rem;
+}
+
+#author_details span{
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+footer{
+    text-align: center;
+    font-size: smaller;
+    color: paleturquoise;    
+}
+
+#foot{
+    height:5%;
+    width:5%;
+}
+
+#layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+#sidebar {
+  width: 240px;
+  background-color: rgba(88, 96, 160, 0.9);
+  padding: 30px 20px;
+  box-sizing: border-box;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+}
+
+#logo {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+#side-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+#side-nav a {
+  text-decoration: none;
+  color: white;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 12px 16px;
+  border-radius: 10px;
+  transition: 0.2s ease;
+}
+
+#side-nav a:hover {
+  background: rgba(255, 255, 255, 0.22);
+  transform: translateX(4px);
+}
+
+#main {
+  flex: 1;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+#main h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+/* Home page center cards */
+#grid {
+  max-width: 700px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 130px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transition: 0.2s ease;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.22);
+  transform: translateY(-4px);
+}
+
+
+#main {
+  flex: 1;
+  padding: 40px;
+  color: white;
+}
+
+#main h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.page-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #f2f2f2;
+}
+
+.author-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.author-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.10);
+  border-radius: 18px;
+  padding: 20px 24px;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.author-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.author-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.action-btn,
+.submit-btn {
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.16);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.action-btn:hover,
+.submit-btn:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.delete-btn {
+  background: rgba(255, 255, 255, 0.10);
+}
+
+.styled-form {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.10);
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.form-row label {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-row input,
+.form-row textarea,
+.form-row select {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.sex-options {
+  display: flex;
+  gap: 24px;
+  padding-top: 4px;
+}

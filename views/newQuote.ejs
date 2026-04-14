@@ -1,0 +1,41 @@
+<%- include('partials/header.ejs') %>
+<div id="layout">
+    <%- include('partials/nav.ejs') %>
+    <div id="main">
+        <h1>Adding a new Quote</h1>
+        <form method="POST" action="/quote/new">
+            <span class="form-row">Quote: <textarea name="quote" rows="5" cols="40"></textarea></span><br>
+            
+            <span class="form-row">Category: 
+                <select name="category" id="category">
+                    <option> Select Category </option>
+                    <% for (category of cats) { %>
+                        <option value="<%= category.category %>">
+                        <%= category.category %>
+                        </option>
+                    <% } %>
+                </select><br>
+            </span><br> 
+            
+            <span class="form-row">Likes: <input type="number" name="likes"></span><br>
+        
+            <span class="form-row">Author: 
+                <select name="author" id=author>
+                    <option> Select Author </option>
+                    <% for (author of authors) { %>
+                        <option value="<%= author.authorId %>">
+                        <%= author.firstName %> <%= author.lastName %>
+                        </option>
+                    <% } %>
+                </select>
+            </span><br> 
+            
+            <button>Add Quote</button>
+        </form> 
+        <% if (typeof message != "undefined"){ %>
+  		    <h3><%=message%></h3>
+        <% } %>
+
+    </div>
+</div> 
+<%- include('partials/footer.ejs') %>

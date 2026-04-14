@@ -1,0 +1,40 @@
+<%- include('partials/header.ejs') %>
+<div id="layout">
+    <%- include('partials/nav.ejs') %>
+    <div id="main">
+        <h1>Updating Author Data</h1>
+        <form method="POST" action="/author/edit">
+
+            <input type="hidden" name="authorId" value="<%=authorInfo[0].authorId%>">
+
+            <span class="form-row">First Name: <input type="text" name="fName" value="<%=authorInfo[0].firstName%>"></span><br>
+            <span class="form-row">Last Name: <input type="text" name="lName" value="<%=authorInfo[0].lastName%>"></span><br>
+            <span class="form-row">Date of Birth: <input type="date" name="dob"  value="<%=authorInfo[0].dobISO%>"></span><br>
+            <span class="form-row">Date of Death: <input type="date" name="dod"  value="<%=authorInfo[0].dodISO%>"></span><br>
+            
+            <span class="form-row">Sex: 
+                <div class="sex-options">
+                <input type="radio" name="sex" value="M" 
+                <% if (authorInfo[0].sex == "M") { %>
+                checked 
+                <% } %>
+                > Male
+
+                <input type="radio" name="sex" value="F" 
+                <% if (authorInfo[0].sex == "F") { %>
+                checked 
+                <% } %>
+                > Female
+                </div>
+            </span><br>
+
+            <span class="form-row">Profession: <input type="text" name="prof" value="<%=authorInfo[0].profession%>"></span><br>
+            <span class="form-row">Country: <input type="text" name="country" value="<%=authorInfo[0].country%>"></span><br>
+            <span class="form-row">Portrait: <input type="text" name="portrait" value="<%=authorInfo[0].portrait%>"></span><br>
+            <span class="form-row">Biography: <textarea name="biography" rows="5" cols="40"><%=authorInfo[0].biography%></textarea></span><br>
+            
+            <button>Update Author</button>
+        </form>  
+    </div>
+</div> 
+<%- include('partials/footer.ejs') %>
