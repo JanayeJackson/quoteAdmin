@@ -39,6 +39,8 @@ app.get('/', async (req, res) => {
 
 app.get("/authors", async function(req, res){
     let sql = `SELECT *
+            DATE_FORMAT(dob, '%Y-%m-%d') dobISO,
+            DATE_FORMAT(dod, '%Y-%m-%d') dodISO
             FROM q_authors
             ORDER BY lastName`;
     const [rows] = await conn.query(sql);
