@@ -38,7 +38,7 @@ app.get('/', async (req, res) => {
 });
 
 app.get("/authors", async function(req, res){
-    let sql = `SELECT *
+    let sql = `SELECT *,
             DATE_FORMAT(dob, '%Y-%m-%d') dobISO,
             DATE_FORMAT(dod, '%Y-%m-%d') dodISO
             FROM q_authors
