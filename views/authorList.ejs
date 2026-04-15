@@ -5,6 +5,7 @@
 
     <div id="main">
         <h1>Authors</h1>
+
         <div id="authors">
             <% for (i of authors) { %>
                 <div class="author-card">
@@ -12,6 +13,25 @@
                         <span class="author-name">
                             <%= i.firstName %> <%= i.lastName %>
                         </span>
+
+                        <div class="author-details">
+                            <span><strong>Birth:</strong> <%= i.dob %></span>
+                            <span><strong>Death:</strong> <%= i.dodn%></span>
+                            <span><strong>Sex:</strong> <%= i.sex %></span>
+                            <span><strong>Profession:</strong> <%= i.profession %></span>
+                            <span><strong>Country:</strong> <%= i.country %></span>
+                        </div>
+
+                        <div class="author-bio">
+                            <strong>Biography:</strong>
+                            <p><%= i.biography || 'No biography available.' %></p>
+                        </div>
+
+                        <% if (i.portrait) { %>
+                            <div class="author-portrait">
+                                <img src="<%= i.portrait %>" alt="<%= i.firstName %> <%= i.lastName %>">
+                            </div>
+                        <% } %>
                     </div>
 
                     <div class="author-actions">
@@ -23,4 +43,5 @@
         </div>
     </div>
 </div>
+
 <%- include('partials/footer.ejs') %>
